@@ -1,0 +1,139 @@
+\documentclass[11pt]{article}
+
+\usepackage[a4paper, hmargin=17mm, vmargin=17mm, top=20mm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{enumitem}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+
+\raggedright
+\raggedbottom
+\setlength{\tabcolsep}{0mm}
+\addtolength{\textwidth}{10mm}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+
+\titleformat{\section}{
+    \vspace{-7pt}\scshape\raggedright\large
+}{}{0em}{}[\titlerule]
+
+\newcommand{\cvheading}[3]{
+    \begin{tabular*}{0.9\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\\
+        \textit{#2} & \textit{#3}\\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\cvitem}[1]{\item #1\vspace{-3pt}}
+
+\overfullrule=2cm
+
+\usepackage[T1]{fontenc}
+\usepackage[urw-garamond]{mathdesign}
+
+% -----------
+% CV DOCUMENT
+% -----------
+\begin{document}
+
+% ------
+% HEADER
+% ------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+\textbf{\Large Charles Mita}\\
+ADDRESS_STREET\\
+ADDRESS_TOWN & Email: \href{mailto:ADDRESS_EMAIL}{ADDRESS_EMAIL}\\
+ADDRESS_COUNTY & Mobile: CONTACT_MOBILE\\
+ADDRESS_POSTCODE & GitHub: \href{https://GITHUB_URL}{GITHUB_URL}\\
+\end{tabular*}
+
+%--------
+% SUMMARY
+%--------
+\section{Profile}
+Result focused and conscientious Software Developer with nearly 5 years experience in the
+Scientific Research sector, and experience within the online Credit sector.\\
+Current role focuses on the data acquisition software for X-ray beamlines at the UK's Synchrotron Light Source,
+utilising modern techniques (Agile, OOP, TDD) to develop and maintain Java and Python software.
+Primary responsibility is the development of the data acquisition system for a fully automated X-ray beamline,
+requiring the coordination of sample loading robots, sample motor stages, optical cameras,
+continuous trajectory controllers, and high frequency X-ray detectors to perform automatic
+data collections with high throughput.\\
+Looking to further develop technical skills and knowledge, producing high-quality software to solve exciting problems
+in a high-tech environment that encourages teamwork and professional growth.
+%-----------
+% EXPERIENCE
+%-----------
+\section{Experience}
+\begin{itemize}
+    \item
+        \cvheading
+            {Diamond Light Source Ltd.}
+            {Software Developer in Data Acquisition}{Jan. 2014 - Present}
+            \begin{itemize}
+            \cvitem
+                {Development and maintenance of the
+                \href{https://github.com/openGDA}{Data Acquisition framework (GDA), an open source Java project.}}
+            \cvitem
+                {Design and development of the data acquisition system for an automated X-ray beamline for
+                macromolecular x-ray crystallography (VMXi).}
+            \cvitem
+            {Design and development of a Python project
+                (\href{https://github.com/dls-controls/scanpointgenerator}{scanpointgenerator})
+                to efficiently describe and produce positions for n-dimensional scans for X-ray data collections.}
+            \cvitem
+                {Design and development of a C plugin for a data analysis tool to allow efficient processing of datasets
+                collected from the latest high speed X-ray detectors (1-100 GB datasets).}
+            \cvitem
+                {Support for data acquisition on multiple X-ray beamlines; including integration and control of devices
+                (motors, detectors, spectrum analysers, and other hardware) into the data acquisition framework.}
+            \end{itemize}
+    \item
+        \cvheading
+            {Credit Reporting Agency Ltd.}
+            {Software/Web Developer}{July 2012 - Dec. 2013}
+            \begin{itemize}
+            \cvitem
+                {Maintenance of multiple customer facing websites using VB.NET.}
+            \cvitem
+                {Rewriting of the website aimed at Australian consumers to match the services
+                offered to UK consumers.}
+            \end{itemize}
+
+\end{itemize}
+
+%----------
+% EDUCATION
+%----------
+\section{Education}
+\begin{itemize}
+    \item
+        \cvheading
+            {University of Warwick}
+            {B.Sc Maths and Physics 2:1}{Oct. 2009 - July 2012}
+    \item
+        \cvheading
+            {Truro College}
+            {A levels in Maths, Further Maths, Physics, Chemistry (AAAA)}{Sept. 2007 - July 2009}
+\end{itemize}
+
+
+%-------
+% SKILLS
+%-------
+\section{Skills}
+\begin{description}[style=nextline]
+    \item[Technologies:]
+            Experience with Java, Python, C, Git, ASP.NET, VB.NET, HDF5.\\
+            Working knowledge of C++, C\#, SVN, GDB, Javascript.
+    \item[Operating Systems:]
+        {Windows, Linux}
+\end{description}
+
+\end{document}

@@ -1,0 +1,12 @@
+*.swp
+*.*~
+*.bak
+*.tmp
+
+build/
+*.log
+*.aux
+*.pdf
+*.out
+
+subs/
