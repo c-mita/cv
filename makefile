@@ -8,14 +8,14 @@ $(BUILD_DIR)/%.tex: $(SUB_DIR)/%.sed cv.tex
 	mkdir -p $(BUILD_DIR)
 	sed -f $^ > $@
 
-example.pdf: $(BUILD_DIR)/example.pdf
-	cp $(BUILD_DIR)/example.pdf ./example.pdf
+%.pdf: $(BUILD_DIR)/%.pdf
+	cp $(BUILD_DIR)/$@ $@
 
 .PHONY: example
 example: example.pdf
 
 .PHONY: main
-main: $(BUILD_DIR)/main.pdf
+main: main.pdf
 
 .PHONY: clean
 clean:
